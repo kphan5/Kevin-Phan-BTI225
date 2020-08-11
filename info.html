@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <title>Kevin Phan's User Info Page</title>
+    <meta charset = "UTF-8"> <!--Define character encoding-->
+    <link rel = "stylesheet" href = "./normalize.css">
+    <!--Set source of validation scripts-->
+    <script src = "./info.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div id = "Intro">
+    <h2>Kevin Phan's User Info Page</h2>
+    </div>
+</header>
+
+<!--Body-->
+<!--Form-->
+<!--DO NOT FORGET TO SET ALL THE INPUT TYPES UNDER REQUIRED!!!!-->
+<div class = "centre">
+    <form action="https://httpbin.org/post" name="signup" method="post" onsubmit = "return validateform();" onreset = "cleanup();"> <!--on submit will take the form through verification, onreset will clean the form and the errors-->
+        First Name: <input type= "text" name= "firstnamefield" id= "firstname" required><br>
+        Last Name: <input type= "text" name= "lastnamefield" id= "lastname" required><br>
+        Password: <input type= "password" name= "passwordfield" id = "passwordfield" required><br>
+        Confirm password: <input type= "password" name= "comfirmpasswordfield" id = "confirmpass" required><br>
+        Username: <input type = "text" name = "usernamefield" id = "usernamef2" required><br>
+        <!--Drop down menu-->
+        Education level:
+        <select id = "educationlevel" name = "educationlevel" required = "required">
+            <option value = "" selected = "selected">-Select-</option>
+            <option value = "Technical Diploma">Technical Diploma</option>
+            <option value = "College Diploma">College Diploma</option>
+            <option value = "Bachelor's Degree">Bachelor's Degree</option>
+            <option value = "Master's Degree">Master's Degree</option>
+            <option value = "Others">Others</option>
+        </select>
+        <br>
+        Education status: <input type = "radio" name = "status" id = "1" value = "1" required = "required"><label for = "1">Graduated</label>
+        <input type = "radio"  name = "status" id ="2" value = "2"> <label for = "2">Currently enrolled</label>
+        <input type = "radio" name = "status" id = "3" value = "3"> <label for = "3">Did not graduate</label> 
+        <br>
+        Email: <input type = "email" name = "emailfield" id = "emailform" required = "required"> <!--required = "required"-->
+        <br>
+        Age: <input type = "number" name = "agefield" min = "18" max = "60" required>
+        <br>
+        <!--Hidden form fields-->
+        <input type="hidden" name="lastName" id="lastName" value="Phan"/>
+        <input type="hidden" name="studentId" id="studentId" value="053357125"/>
+        <input type = "submit" name = "submitform" value = "Submit" onsubmit = "submit();"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type = "reset" name = "resetform" value = "Reset">
+        <br><br>
+        <p>Note: Press the reset button to clean out the error messages in the side bar as well<br>There are two hidden values (lastName and studentId) on this page.</p>
+    </form>
+</div>
+
+<!--Region where all the error messages will go. It may look empty on the surface but it will be full of errors soon. CSS also references this area-->
+<div id = "errorbox">
+
+</div>
+
+<nav>
+    <ul>
+        <!--Connect to the main page-->
+        <li><a href = "./honesty.html">Welcome Page</a></li>
+        <!--Connect to the reflection page-->
+        <li><a href = "./reflection.html">Reflection Page</a></li>
+        <!--You are here. Connect to the user info page-->
+        <li><a href = "./info.html">User Info Page</a></li>
+    </ul>
+</nav>
+
+<!--Side panel-->
+<div class = "Fouclick"> <!--Father div class-->
+    <script src = "./info.js"></script> <!--Source of the script-->
+    <div id = "Fou"></div> <!--div id of the image in the side panel-->
+    <div id = "NormalFou"></div> <!--Little familiar's text in the side panel-->
+    <div id = "SpookyFou"></div>
+    <div id = "SpookyFouTalking"></div>
+</div>
+
+<footer>
+<!--Link to the Github in a new tab-->
+<a href = "https://www.google.com" target = "_blank">Link to the Github</a>
+<br> 
+&copy; Kevin Phan 2020
+</footer>
+
+</body>
+</html>

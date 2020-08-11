@@ -1,0 +1,98 @@
+/*Self note: id can be referenced to only once, class may be referenced to more than once per HTML page. QuerySelector as far as I know can only select id*/
+
+/*Set font family of entire website to sans serif/Times new roman if not supported by user's browser*/
+html {
+font-family: sans-serif, 'Times New Roman', 'Serif', 'Monotype';
+background-color: orange; /*Set background of entire site to brown*/
+}
+
+/*Create a border for every header*/
+header{
+text-align: center;
+color:blueviolet;
+border: solid #456432; 
+border-radius: 15px;
+}
+
+/*Set properties to the navigation pane*/
+nav{
+position: fixed;
+top: 12%;
+margin-bottom: 50px;
+text-align: left; /*Align text to left for all navigation menu on all pages*/
+border: 2px solid black; /*Set border*/
+width: 200px; /*Set width of box to 200px*/
+height: 150px; /*Set height of box to 250px*/
+background-color: seashell;
+}
+
+/*Styling for the links in the navigation menu*/
+nav ul{
+list-style-type: upper-roman;
+}
+
+footer{
+/*Position the footer at the bottom and centre it*/
+margin-top: 735px;
+margin-left: 850px;
+/*Border properties*/
+border: 2px solid black;
+max-height: 50px;
+max-width: 200px;
+text-align: center;
+padding-left: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+color: #2a5643; 
+/*Give the border it's corner curvature. One singular value will adjust all corners*/
+border-radius: 10px;
+}
+
+/*Change the colour of the link to match the text in the footer. Separate from above to that another border is not created*/
+footer a{
+color: #2a5643;
+}
+
+/*"Body" containing most of the information required on each page*/
+div.centre{
+position: fixed;
+border: 2px solid red;
+/*Padding to allow some space in the box for the text*/
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 3px;
+height: 700px;
+width: 750px;
+top: 12%;
+left: 30%;
+}
+
+/*Side panel for every page*/
+div.Fouclick{
+position: fixed;
+margin-left: auto; /*Auto margin to the very right*/
+border: 2px solid blue;
+top: 34%;
+height: 550px;
+width: 200px;
+/*Give spacing to the image and text in the side panel*/
+padding-left: 2px;
+}
+
+/*Side panel to display errors from the info page*/
+div#errorbox{
+position: fixed;
+margin-left: auto; /*Auto margin to the very right*/
+border: 2px solid blue;
+left: 89%;
+top: 12%;
+height: 800px;
+width: 200px;
+/*Give spacing to the image and text in the side panel*/
+padding-left: 2px;
+}
+
+/*Change the font size of the reflection*/
+div#Reflection p{
+font-size: 12pt;
+}
